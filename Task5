@@ -1,0 +1,22 @@
+Task 5
+Data Quality and Performance Testing:
+Q1.Describe how you would perform data quality checks to ensure that the migrated data is accurate and complete.
+
+Ans:-
+1. Accuracy & Completeness:
+    This can be achieved by comparing record counts between the source and target databases, as well as analysing the differences between source minus target and target minus source.
+2. Consistency:
+    Ensure that data formats adhere to specified standards, such as date formats for date columns and case sensitivity for names and other fields. Perform distinct count checks, verify that required columns are not null, and check for duplicates in primary keys.
+3. Data Sampling:
+    Conduct random sampling of records from both the source and migrated databases for manual validation.
+4. Business Rule Validation:
+    Confirm that the migrated data complies with relevant business rules if applicable.
+
+Q2.Outline a strategy for performance testing of the ETL process. Include considerations for handling large volumes of data and ensuring the ETL process completes within acceptable time frames.
+
+Ans :-
+
+1.Filter Data Before Joining: Apply filters to individual tables prior to executing joins. This approach decreases the number of rows processed, enhancing performance.
+2.Select Appropriate Join Types: Choose the correct join types (such as inner or outer) based on business needs to minimize unnecessary data processing.
+3.Incremental Loading: Implement incremental loads to limit the volume of data processed during each ETL cycle.
+4.Partitioning (as supported by Oracle DB): Partition data in both source and destination tables to optimize loading times.
